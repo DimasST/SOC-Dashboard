@@ -15,7 +15,7 @@ export default function Page() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/logs");
+        const res = await fetch("http://localhost:3001/api/device_logs");
         const data = await res.json();
         setLogs(data);
       } catch (err) {
@@ -25,7 +25,7 @@ export default function Page() {
 
     const fetchWebsiteLogs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/website_logs");
+        const res = await fetch("http://localhost:3001/api/website_logs");
         const data = await res.json();
         setWebsiteLogs(data);
       } catch (err) {
